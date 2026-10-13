@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>StudyMark 隐私政策</title>
+    <style>
+      :root {
+        --pink: #fb7299;
+        --text: #1f2329;
+        --muted: #6b7280;
+        --border: #e5e7eb;
+        --bg: #f9fafb;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei",
+          "Segoe UI", sans-serif;
+        font-size: 15px;
+        line-height: 1.8;
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrap {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 40px 20px 80px;
+      }
+      header {
+        border-bottom: 2px solid var(--pink);
+        padding-bottom: 18px;
+        margin-bottom: 26px;
+      }
+      h1 {
+        margin: 0 0 8px;
+        font-size: 24px;
+      }
+      .meta {
+        font-size: 13px;
+        color: var(--muted);
+      }
+      h2 {
+        font-size: 17px;
+        margin: 34px 0 12px;
+        padding-left: 11px;
+        border-left: 4px solid var(--pink);
+      }
+      h3 {
+        font-size: 15px;
+        margin: 22px 0 8px;
+      }
+      p,
+      li {
+        margin: 8px 0;
+      }
+      ul {
+        padding-left: 22px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 14px 0;
+        font-size: 14px;
+        background: #fff;
+      }
+      th,
+      td {
+        border: 1px solid var(--border);
+        padding: 9px 12px;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        background: #f3f4f6;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+      code {
+        background: #f3f4f6;
+        padding: 1px 6px;
+        border-radius: 5px;
+        font-size: 13px;
+      }
+      .callout {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-left: 4px solid var(--pink);
+        border-radius: 8px;
+        padding: 14px 18px;
+        margin: 18px 0;
+      }
+      .callout strong {
+        color: var(--pink);
+      }
+      footer {
+        margin-top: 44px;
+        padding-top: 18px;
+        border-top: 1px solid var(--border);
+        font-size: 13px;
+        color: var(--muted);
+      }
+      a {
+        color: var(--pink);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>StudyMark 隐私政策</h1>
+        <div class="meta">
+          适用产品：StudyMark · B站学习笔记（浏览器扩展）<br />
+          适用版本：0.1.0 及以上 &nbsp;·&nbsp; 最后更新：2026-10-13
+        </div>
+      </header>
+
+      <div class="callout">
+        <strong>一句话总结：</strong>你的笔记只存在你自己的浏览器里，我们不收集、不上传、不分享任何内容。
+      </div>
+
+      <h2>一、我们收集什么</h2>
+
+      <h3>1. 保存在你设备本地的数据（不离开你的浏览器）</h3>
+      <table>
+        <tr>
+          <th>数据</th>
+          <th>用途</th>
+          <th>存储位置</th>
+        </tr>
+        <tr>
+          <td>你的笔记内容与时间戳</td>
+          <td>核心功能</td>
+          <td><code>chrome.storage.local</code></td>
+        </tr>
+        <tr>
+          <td>视频标题、URL、视频 ID</td>
+          <td>把笔记关联回原视频</td>
+          <td><code>chrome.storage.local</code></td>
+        </tr>
+        <tr>
+          <td>扩展安装时间</td>
+          <td>计算 7 天试用期</td>
+          <td><code>chrome.storage.local</code></td>
+        </tr>
+        <tr>
+          <td>Pro 授权码</td>
+          <td>解锁付费功能</td>
+          <td><code>chrome.storage.local</code></td>
+        </tr>
+        <tr>
+          <td>匿名事件计数（见下）</td>
+          <td>判断功能是否真的被使用</td>
+          <td><code>chrome.storage.local</code></td>
+        </tr>
+      </table>
+      <p>
+        <strong>这些数据只存在你自己的浏览器里，我们无法访问，也不会上传到任何服务器。</strong>
+      </p>
+
+      <h3>2. 匿名使用统计（可选，默认仅本地）</h3>
+      <p>扩展会记录以下<strong>聚合计数</strong>：</p>
+      <ul>
+        <li>事件名称（例如 <code>mark_created</code>、<code>panel_open</code>、<code>export_markdown</code>）</li>
+        <li>事件发生的<strong>次数</strong>与<strong>日期</strong>（精确到天）</li>
+        <li>扩展版本号</li>
+      </ul>
+      <p>
+        <strong>不会记录：</strong>笔记内容、视频标题、URL、搜索词、Cookie、账号信息，
+        也不会记录精确到秒的行为轨迹。
+      </p>
+      <div class="callout">
+        <strong>默认行为：</strong>以上统计只写入你本机的
+        <code>chrome.storage.local</code>，不发送到任何地方。<br /><br />
+        <strong>开启远程上报：</strong>只有当<strong>你自己</strong>在扩展弹窗中填写一个上报地址，
+        并授权该域名后，扩展才会向该地址发送上述聚合事件。你随时可以清空该地址以关闭上报。
+      </div>
+
+      <h3>3. 我们不收集</h3>
+      <ul>
+        <li>不收集姓名、邮箱、电话等个人身份信息</li>
+        <li>不读取你的 B站账号、Cookie 或登录凭证</li>
+        <li>不收集你的浏览历史</li>
+        <li>不投放广告，不做用户画像，不向第三方出售或共享数据</li>
+      </ul>
+
+      <h2>二、权限说明</h2>
+      <table>
+        <tr>
+          <th>权限</th>
+          <th>为什么需要</th>
+        </tr>
+        <tr>
+          <td><code>storage</code></td>
+          <td>在本地保存笔记、设置与统计计数</td>
+        </tr>
+        <tr>
+          <td>可选主机权限（<code>https://*/*</code>）</td>
+          <td>
+            <strong>仅当</strong>你主动填写自定义上报地址时，才会请求该域名的访问权限
+          </td>
+        </tr>
+      </table>
+      <p>
+        内容脚本仅在 <code>https://www.bilibili.com/video/*</code> 页面运行，用于读取当前播放进度
+        （<code>&lt;video&gt;</code> 元素的 <code>currentTime</code>）与视频标题。
+        扩展<strong>不调用</strong> B站的任何私有接口。
+      </p>
+
+      <h2>三、数据删除</h2>
+      <ul>
+        <li>
+          <strong>在扩展内清除：</strong>点击扩展图标 →「清除笔记与统计」，即可删除全部笔记与统计数据。
+        </li>
+        <li>
+          <strong>完全卸载：</strong>在浏览器扩展管理页移除本扩展，浏览器会自动删除其全部本地数据。
+        </li>
+      </ul>
+
+      <h2>四、儿童隐私</h2>
+      <p>本扩展不面向 13 岁以下儿童，也不会有意收集儿童的个人信息。</p>
+
+      <h2>五、政策变更</h2>
+      <p>如本政策发生重大变更，我们会在扩展更新说明中提示，并更新本文顶部的日期。</p>
+
+      <h2>六、联系方式</h2>
+      <p>
+        如有隐私相关问题，请联系：<strong>your-email@example.com</strong>
+      </p>
+
+      <footer>
+        本页面为静态页面，可直接托管在 GitHub Pages / Cloudflare Pages 等任意静态托管服务上，
+        把网址填入 Chrome 应用商店与 Edge 加载项商店的「隐私政策 URL」字段即可。
+      </footer>
+    </div>
+  </body>
+</html>
